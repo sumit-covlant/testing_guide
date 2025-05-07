@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: testing-guides:v1
+    container_name: testing-guides-web
+    ports:
+      - "3005:3000"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped 
